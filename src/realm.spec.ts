@@ -58,10 +58,10 @@ describe('postRealmStatuses', () => {
 
     const [realm1, realm2, connectedRealm1, connectedRealm2] = fetchMock.calls();
 
-    expect(realm1[0]).toBe('https://us.api.blizzard.com/data/wow/realm/test_realm_slug_1?namespace=dynamic-us');
+    expect(realm1[0]).toBe('https://us.api.blizzard.com/data/wow/realm/test_realm_slug_1?namespace=dynamic-classic-us');
     expect(realm1[1]).toStrictEqual({ headers: { Authorization: 'Bearer test_blizzard_api_token' } });
 
-    expect(realm2[0]).toBe('https://us.api.blizzard.com/data/wow/realm/test_realm_slug_2?namespace=dynamic-us');
+    expect(realm2[0]).toBe('https://us.api.blizzard.com/data/wow/realm/test_realm_slug_2?namespace=dynamic-classic-us');
     expect(realm2[1]).toStrictEqual({ headers: { Authorization: 'Bearer test_blizzard_api_token' } });
 
     expect(connectedRealm1[0]).toBe('https://test-connected-realm-1-api.com/');
